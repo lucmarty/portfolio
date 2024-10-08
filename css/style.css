@@ -231,6 +231,7 @@ p {
 .container img {
     display: block;
     max-width: 100%;
+    width: auto;
     height: auto;  
     border-radius: 50%;  
     transition: filter 0.3s ease;
