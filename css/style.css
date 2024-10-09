@@ -51,7 +51,7 @@ p {
     background-position: 0% 54%;
 }
 
-.backhead>div {
+.backhead div {
     display: flex;         
     align-items: center;
     width: fit-content;    
@@ -59,9 +59,11 @@ p {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     padding: 0.7em 1.5em 0.3em 1.5em;
-
 }
 
+.backhead a {
+    text-decoration: none;
+}
 
 .backhead div img {    
     --zoom: 1.35;

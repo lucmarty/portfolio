@@ -55,6 +55,10 @@ li {
     /* #4E4541 */
 }
 
+.backhead a {
+    text-decoration: none;
+}
+
 .backhead div {
     display: flex;         
     align-items: center;
