@@ -4,18 +4,19 @@ import localFont from "next/font/local";
 import "./globals.css"; 
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../public/assets/fonts/GeistVF.woff",  
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const satoshi = localFont({
-  src: "./fonts/Satoshi-regular.woff",
+  src: "../public/assets/fonts/Satoshi-regular.woff",  
   variable: "--font-satoshi",
 });
 const satoshiBold = localFont({
-  src: "./fonts/Satoshi-bold.woff",
+  src: "../public/assets/fonts/Satoshi-bold.woff",  
   variable: "--font-satoshi-bold",
 });
+
 const acorn = {
   variable: "--font-acorn",
 };
@@ -39,8 +40,7 @@ export default function RootLayout({
           satoshi.variable,
           satoshiBold.variable,
           acorn.variable
-        )}
-      >
+        )}>
         {children}
       </body>
     </html>
