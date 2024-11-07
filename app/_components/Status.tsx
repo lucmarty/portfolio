@@ -1,10 +1,11 @@
 import { Section } from './Section';
 import { Card } from '@/components/ui/card';
-import { LucideIcon, Globe } from 'lucide-react';
+import { LucideIcon, Globe, Cctv } from 'lucide-react';
 import { SymfonyIcon } from './icons/SymfonyIcon';
 import { JavaScriptIcon } from './icons/JavaScriptIcon'
 import { CSSIcon } from './icons/CSSIcon';
 import { HtmlIcon } from './icons/HtmlIcon';
+import { PythonIcon } from './icons/PythonIcon';
 import Link from 'next/link';
 import Image from "next/image";
 import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
@@ -32,6 +33,14 @@ export const Status = () => {
                 <SymfonyIcon key="symfony" size={42} />,
                 <JavaScriptIcon key="javascript" size={42} />
                 ]
+        },
+        {
+            Logo: Cctv,
+            title: "Reconnaissance d'Images",
+            shortDescription: "Programme Python, capable de reconnaître automatiquement les chiffres inscrits sur des images.",
+            description: "Ce projet de reconnaissance d'image m'a permis de renforcer mes compétences en traitement d'images et en apprentissage automatique. En travaillant sur la classification de chiffres, j'ai appris à préparer les données de manière efficace. Ce projet m'a aussi fait prendre conscience des défis liés à la précision des modèles et m’a donné des pistes pour améliorer un modèle en ajustant les étapes de traitement et en diversifiant les données. En somme, cette expérience a été précieuse pour approfondir mes compétences en intelligence artificielle appliquée.",
+            imgs: ["reco/basededonnées.png", "reco/matrice_Confusion.png", "reco/schéma.png", "reco/traitement.png"],
+            icons: [<PythonIcon key="python" size={42} />]
         }
     ]
 
@@ -74,8 +83,8 @@ export const Status = () => {
                     </div>
                 </DialogTrigger>
 
-                <DialogContent className="min-w-[80vw] max-w-[90vw] max-h-fit flex items-center max-md:flex-col">
-                    <div className="w-fit h-fit m-6">
+                <DialogContent className="min-w-[80vw]  flex items-center max-md:flex-col">
+                    <div className="flex-1 w-fit h-fit m-6">
                         <div className="mb-8"><h2 className="text-4xl text-center font-semibold">{props.title}</h2></div>
 
                         <div className="m-2">
@@ -92,7 +101,7 @@ export const Status = () => {
                         </div>
                     </div>
 
-                    <Carousel className="m-8 h-fit w-fit">
+                    <Carousel className="flex-1 m-8">
                         <CarouselContent>
                             {props.imgs && props.imgs.length > 0 ? (
                                 props.imgs.map((img, index) => (
@@ -102,7 +111,7 @@ export const Status = () => {
                                             layout="responsive"
                                             width={1800}
                                             height={1800}
-                                            className="w-auto h-auto "
+                                            className="object-contain max-h-[40vh] bg-white"
                                             alt={`image-${index}`}
                                             priority
                                         />
@@ -131,20 +140,11 @@ export const Status = () => {
     const Works = (props: WorksProps) => {
         return (
             <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded">
-
-                {/* <Image 
-                        src={props.image} 
-                        alt={props.title} 
-                        width={16}
-                        height={16}
-                        className="w-4 h-4 object-contain"
-                    /> */}
                 <img
                     src={props.image}
                     alt={props.title}
                     className="w-10 h-10 object-contain rounded-md"
                 />
-
                 <div className="text-left">
                     <p className="text-lg font-semibold">{props.title}</p>
                     <p className="text-sm text-muted-foreground">{props.role}</p>
