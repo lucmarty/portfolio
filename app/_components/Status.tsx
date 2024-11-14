@@ -107,7 +107,7 @@ export const Status = () => {
                                 props.imgs.map((img, index) => (
                                     <CarouselItem key={index}>
                                         <Image
-                                            src={`/assets/${img}`}
+                                            src={`./assets/${img}`}
                                             layout="responsive"
                                             width={1800}
                                             height={1800}
