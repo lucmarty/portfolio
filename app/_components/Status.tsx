@@ -8,7 +8,7 @@ import { HtmlIcon } from './icons/HtmlIcon';
 import { PythonIcon } from './icons/PythonIcon';
 import Link from 'next/link';
 import Image from "next/image";
-import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogTrigger, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import BlurFade from '@/components/ui/blur-fade';
 import {
     Carousel,
@@ -83,7 +83,8 @@ export const Status = () => {
                     </div>
                 </DialogTrigger>
 
-                <DialogContent className="min-w-[80vw]  flex items-center max-md:flex-col">
+                <DialogContent className="min-w-[80vw] max-h-[90vh] overflow-auto flex items-center max-md:flex-col">
+                    <DialogTitle></DialogTitle>
                     <div className="flex-1 w-fit h-fit m-6">
                         <div className="mb-8"><h2 className="text-4xl text-center font-semibold">{props.title}</h2></div>
 
@@ -102,7 +103,7 @@ export const Status = () => {
                     </div>
 
                     <Carousel className="flex-1 m-8">
-                        <CarouselContent>
+                        <CarouselContent className="items-center">
                             {props.imgs && props.imgs.length > 0 ? (
                                 props.imgs.map((img, index) => (
                                     <CarouselItem key={index}>
