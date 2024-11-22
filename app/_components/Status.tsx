@@ -114,7 +114,7 @@ export const Status = () => {
                                             height={1800}
                                             className="object-contain max-h-[40vh] bg-white"
                                             alt={`image-${index}`}
-                                            priority
+                                            placeholder="empty"
                                         />
                                     </CarouselItem>
                                 ))
