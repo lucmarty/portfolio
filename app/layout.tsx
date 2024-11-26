@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css"; 
 import { Roboto } from 'next/font/google'
+
+import { CursorProvider } from './_providers/CursorProvider'
+import { CustomCursor } from "./_components/CustomCursor"
  
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -51,7 +54,10 @@ export default function RootLayout({
           roboto.className
         )}
       >
-        {children}
+        <CursorProvider>
+          {children}
+          <CustomCursor />
+        </CursorProvider>
       </body>
     </html>
   );

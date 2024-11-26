@@ -24,7 +24,7 @@ export const Status = () => {
     const PROJECTS: ProjectsProps[] = [
         {
             Logo: Globe,
-            title: "Not Enought Series",
+            title: "Not Enough Series",
             shortDescription: "Site web développé sous Symfony, semblable à AlloCiné, permettant de consulter un catalogue de séries et d'y déposer des critiques.",
             description: "Dans le cadre de ce projet, nous avons appliqué la méthode agile SCRUM avec des itérations de trois jours, favorisant une évolution continue et l’intégration des retours du product owner. En tant que développeur fullstack, j'ai pris en charge le front-end, le design, et une partie du back-end pour répondre aux attentes fonctionnelles, en veillant particulièrement à l’interaction avec la base de données. Celle-ci permettait de stocker et de récupérer en temps réel des informations clés, comme les séries suivies, les préférences utilisateur, les notes et les commentaires, garantissant ainsi une expérience utilisateur dynamique et personnalisée.",
             imgs: ["nes/nes1.png", "nes/nes2.png", "nes/nes3.png", "nes/nes4.png", "nes/nes5.png", "nes/nes6.png"],
