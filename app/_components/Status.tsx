@@ -1,6 +1,6 @@
 import { Section } from './Section';
 import { Card } from '@/components/ui/card';
-import { LucideIcon, Globe, Cctv } from 'lucide-react';
+import { LucideIcon, Globe, Cctv, Atom } from 'lucide-react';
 import { SymfonyIcon } from './icons/SymfonyIcon';
 import { JavaScriptIcon } from './icons/JavaScriptIcon'
 import { CSSIcon } from './icons/CSSIcon';
@@ -41,6 +41,14 @@ export const Status = () => {
             description: "Ce projet de reconnaissance d'image m'a permis de renforcer mes compétences en traitement d'images et en apprentissage automatique. En travaillant sur la classification de chiffres, j'ai appris à préparer les données de manière efficace. Ce projet m'a aussi fait prendre conscience des défis liés à la précision des modèles et m’a donné des pistes pour améliorer un modèle en ajustant les étapes de traitement et en diversifiant les données. En somme, cette expérience a été précieuse pour approfondir mes compétences en intelligence artificielle appliquée.",
             imgs: ["reco/basededonnées.png", "reco/matrice_Confusion.png", "reco/schéma.png", "reco/traitement.png"],
             icons: [<PythonIcon key="python" size={42} />]
+        },
+        {
+            Logo: Atom,
+            title: "3D Pokédex",
+            shortDescription: "Projet React, permettant de consulter un Pokédex contenant des models 3D, avec différentes fonctionnalité supplémentaire.",
+            description: "Au sein d'une équipe de 5 personnes, nous avons développé un site dynamique dédié aux fans de Pokémon, en adoptant une méthodologie agile (SCRUM). Ce projet inclut un Pokédex interactif intégrant des modèles 3D de Pokémon réalisés avec Three.js. Les utilisateurs peuvent rechercher des Pokémon par nom, type, numéro de Pokédex, statistiques, afin de composer leurs propres équipes stratégiques. Ce projet a été l'occasion de nous familiariser avec des technologies clés telles que React, Three.js, et l'intégration d'une base de données MongoDB",
+            imgs : ["3dpokedex/pokedex1.png", "3dpokedex/pokedex2.png", "3dpokedex/pokedex3.png", "3dpokedex/pokedex4.png", "3dpokedex/pokedex5.png", "3dpokedex/pokedex6.png", "3dpokedex/pokedex7.png"],
+            icons : []
         }
     ]
 
@@ -75,7 +83,7 @@ export const Status = () => {
             <Dialog>
                 <DialogTrigger className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded">
                     <span className="bg-accent text-accent-foreground p-3 rounded-sm">
-                        <props.Logo size={16} />
+                        <props.Logo size={18} />
                     </span>
                     <div className="text-left">
                         <p className="text-lg font-semibold">{props.title}</p>
@@ -164,7 +172,7 @@ export const Status = () => {
                     <Card className="w-full p-4 flex flex-col gap-2 w-ful">
                         <p className="text-lg text-muted-foreground">Projets</p>
                         <div className="flex flex-col gap-4">
-                            {PROJECTS.map((project, index) => (
+                            {PROJECTS.slice().reverse().map((project, index) => (
                                 <Projects
                                     key={index}
                                     Logo={project.Logo}
