@@ -6,6 +6,9 @@ import { JavaScriptIcon } from './icons/JavaScriptIcon'
 import { CSSIcon } from './icons/CSSIcon';
 import { HtmlIcon } from './icons/HtmlIcon';
 import { PythonIcon } from './icons/PythonIcon';
+import { ReactIcon } from './icons/ReactIcon';
+import { TailwindIcon } from './icons/TailwindIcon';
+import { MongoDBIcon } from './icons/MongoDBIcon';
 import Link from 'next/link';
 import Image from "next/image";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle } from '@/components/ui/dialog';
@@ -28,11 +31,11 @@ export const Status = () => {
             shortDescription: "Site web développé sous Symfony, semblable à AlloCiné, permettant de consulter un catalogue de séries et d'y déposer des critiques.",
             description: "Dans le cadre de ce projet, nous avons appliqué la méthode agile SCRUM avec des itérations de trois jours, favorisant une évolution continue et l’intégration des retours du product owner. En tant que développeur fullstack, j'ai pris en charge le front-end, le design, et une partie du back-end pour répondre aux attentes fonctionnelles, en veillant particulièrement à l’interaction avec la base de données. Celle-ci permettait de stocker et de récupérer en temps réel des informations clés, comme les séries suivies, les préférences utilisateur, les notes et les commentaires, garantissant ainsi une expérience utilisateur dynamique et personnalisée.",
             imgs: ["nes/nes1.png", "nes/nes2.png", "nes/nes3.png", "nes/nes4.png", "nes/nes5.png", "nes/nes6.png"],
-            icons: [<HtmlIcon key="html" style={{ width: '42', height: '78'}} />,
-                <CSSIcon key="css" style={{ width: '42', height: '78'}} />,                
-                <SymfonyIcon key="symfony" size={42} />,
-                <JavaScriptIcon key="javascript" size={42} />
-                ]
+            icons: [<HtmlIcon key="html" style={{ width: '42', height: '78' }} />,
+            <CSSIcon key="css" style={{ width: '42', height: '78' }} />,
+            <SymfonyIcon key="symfony" size={42} />,
+            <JavaScriptIcon key="javascript" size={42} />
+            ]
         },
         {
             Logo: Cctv,
@@ -47,21 +50,25 @@ export const Status = () => {
             title: "3D Pokédex",
             shortDescription: "Projet React, permettant de consulter un Pokédex contenant des models 3D, avec différentes fonctionnalité supplémentaire.",
             description: "Au sein d'une équipe de 5 personnes, nous avons développé un site dynamique dédié aux fans de Pokémon, en adoptant une méthodologie agile (SCRUM). Ce projet inclut un Pokédex interactif intégrant des modèles 3D de Pokémon réalisés avec Three.js. Les utilisateurs peuvent rechercher des Pokémon par nom, type, numéro de Pokédex, statistiques, afin de composer leurs propres équipes stratégiques. Ce projet a été l'occasion de nous familiariser avec des technologies clés telles que React, Three.js, et l'intégration d'une base de données MongoDB",
-            imgs : ["3dpokedex/pokedex1.png", "3dpokedex/pokedex2.png", "3dpokedex/pokedex3.png", "3dpokedex/pokedex4.png", "3dpokedex/pokedex5.png", "3dpokedex/pokedex6.png", "3dpokedex/pokedex7.png"],
-            icons : []
+            imgs: ["3dpokedex/pokedex1.png", "3dpokedex/pokedex2.png", "3dpokedex/pokedex3.png", "3dpokedex/pokedex4.png", "3dpokedex/pokedex5.png", "3dpokedex/pokedex6.png", "3dpokedex/pokedex7.png"],
+            icons: [<JavaScriptIcon key="javascript" size={42} />,
+            <ReactIcon key="react" size={42} />,
+            <TailwindIcon key="tailwind" size={42} />,
+            <MongoDBIcon key="mongodb" size={42} />
+            ]
         }
     ]
 
     const WORKS: WorksProps[] = [
         {
-            image: "https://media.licdn.com/dms/image/v2/C4E0BAQGNfeTPCu6Z-w/company-logo_100_100/company-logo_100_100/0/1631312208065?e=1737590400&v=beta&t=3cjBMwLhAPbiLn7BqhUd5I_hS__L-KteLkfQKNPGuVY",
+            image: "https://media.licdn.com/dms/image/v2/C4E0BAQGNfeTPCu6Z-w/company-logo_100_100/company-logo_100_100/0/1631312208065?e=1746057600&v=beta&t=5bL9ashQylDGS4dZ_cwevHjjWDryMRW5kMhFx0b0X6Y",
             title: "Schneider Electric",
             role: "Stage Développeur Fullstack",
             date: "Avril 2024 - Juin 2024",
             url: "https://www.linkedin.com/company/2329/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BFPv8z692SCmduIkABpNJCA%3D%3D"
         },
         {
-            image: "https://media.licdn.com/dms/image/v2/C4D0BAQHqjJ4jvF3MOQ/company-logo_100_100/company-logo_100_100/0/1635141033555/la_poste_logo?e=1737590400&v=beta&t=hekiRqW36DBq7Xqg8vYCkHq7g1AlTOohbO57gZglY8c",
+            image: "https://media.licdn.com/dms/image/v2/C4D0BAQHqjJ4jvF3MOQ/company-logo_100_100/company-logo_100_100/0/1635141033555/la_poste_logo?e=1746057600&v=beta&t=bvyPQuPcLRP82_BELzbfJ6Qwq95gNt8qUxp1i7Lrhxo",
             title: "La Poste",
             role: "Chargé de Clientèle",
             date: "Septembre 2022 - Janvier 2024",
@@ -91,6 +98,7 @@ export const Status = () => {
                     </div>
                 </DialogTrigger>
 
+                {/* Popup */}
                 <DialogContent className="min-w-[80vw] max-h-[90vh] overflow-auto flex items-center max-md:flex-col">
                     <DialogTitle></DialogTitle>
                     <div className="flex-1 w-fit h-fit m-6">
@@ -98,6 +106,7 @@ export const Status = () => {
 
                         <div className="m-2">
                             <p className="text-3xl">Outils Utilisés</p>
+                            {/* Icons */}
                             <ul className="flex h-fit mb-6">
                                 {props.icons.map((icon, index) => (
                                     <li key={index} className="m-2 flex items-end">{icon}</li>
