@@ -1,6 +1,6 @@
 import { Section } from './Section';
 import { Card } from '@/components/ui/card';
-import { LucideIcon, Globe, Cctv, Atom } from 'lucide-react';
+import { LucideIcon, Globe, Cctv, Atom, Earth } from 'lucide-react';
 import { SymfonyIcon } from './icons/SymfonyIcon';
 import { JavaScriptIcon } from './icons/JavaScriptIcon'
 import { CSSIcon } from './icons/CSSIcon';
@@ -9,6 +9,8 @@ import { PythonIcon } from './icons/PythonIcon';
 import { ReactIcon } from './icons/ReactIcon';
 import { TailwindIcon } from './icons/TailwindIcon';
 import { MongoDBIcon } from './icons/MongoDBIcon';
+import { PHPIcon } from './icons/PHPIcon';
+import { MariaDBIcon } from './icons/MariaDBIcon';
 import Link from 'next/link';
 import Image from "next/image";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle } from '@/components/ui/dialog';
@@ -33,6 +35,7 @@ export const Status = () => {
             imgs: ["nes/nes1.png", "nes/nes2.png", "nes/nes3.png", "nes/nes4.png", "nes/nes5.png", "nes/nes6.png"],
             icons: [<HtmlIcon key="html" style={{ width: '42', height: '78' }} />,
             <CSSIcon key="css" style={{ width: '42', height: '78' }} />,
+            <PHPIcon key="php" size={50} />,
             <SymfonyIcon key="symfony" size={42} />,
             <JavaScriptIcon key="javascript" size={42} />
             ]
@@ -55,6 +58,19 @@ export const Status = () => {
             <ReactIcon key="react" size={42} />,
             <TailwindIcon key="tailwind" size={42} />,
             <MongoDBIcon key="mongodb" size={42} />
+            ]
+        },
+        {
+            Logo: Earth,
+            title: "Antigaspillage CROUS",
+            shortDescription: "Site web permettant aux dirigeants du crous de centraliser les données liées aux gaspillages alimentaires afin de facilité la prise de décision.",
+            description: "En équipe de 5, nous avons développé un proof of concept destiné au CROUS de Bordeaux pour lutter contre le gaspillage alimentaire. Ce projet consistait à centraliser et uniformiser les données fournies par plusieurs prestataires chargés de collecter les biodéchets quotidiennement. Ces informations sont utilisées à des fins de datavisualisation pour permettre aux dirigeants de prendre des décisions plus éclairées. Ce projet a également été l'occasion de travailler avec des technologies telles que Symfony, MariaDB, et Python pour le scraping de données.",
+            imgs: ["crous/crous1.png", "crous/crous2.png", "crous/crous3.png", "crous/crous4.png"],
+            icons: [<PHPIcon key="php" size={50} />,
+            <JavaScriptIcon key="javascript" size={42} />,
+            <SymfonyIcon key="symfony" size={42} />,
+            <MariaDBIcon key="mariadb" size={42} />,
+            <PythonIcon key="python" size={42} />
             ]
         }
     ]
