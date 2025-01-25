@@ -30,6 +30,7 @@ export const Status = () => {
         {
             Logo: Globe,
             title: "Not Enough Series",
+            date: "Janvier 2024",
             shortDescription: "Site web développé sous Symfony, semblable à AlloCiné, permettant de consulter un catalogue de séries et d'y déposer des critiques.",
             description: "Dans le cadre de ce projet, nous avons appliqué la méthode agile SCRUM avec des itérations de trois jours, favorisant une évolution continue et l’intégration des retours du product owner. En tant que développeur fullstack, j'ai pris en charge le front-end, le design, et une partie du back-end pour répondre aux attentes fonctionnelles, en veillant particulièrement à l’interaction avec la base de données. Celle-ci permettait de stocker et de récupérer en temps réel des informations clés, comme les séries suivies, les préférences utilisateur, les notes et les commentaires, garantissant ainsi une expérience utilisateur dynamique et personnalisée.",
             imgs: ["nes/nes1.png", "nes/nes2.png", "nes/nes3.png", "nes/nes4.png", "nes/nes5.png", "nes/nes6.png"],
@@ -43,6 +44,7 @@ export const Status = () => {
         {
             Logo: Cctv,
             title: "Reconnaissance d'Images",
+            date: "Novembre 2024",
             shortDescription: "Programme Python, capable de reconnaître automatiquement les chiffres inscrits sur des images.",
             description: "Ce projet de reconnaissance d'image m'a permis de renforcer mes compétences en traitement d'images et en apprentissage automatique. En travaillant sur la classification de chiffres, j'ai appris à préparer les données de manière efficace. Ce projet m'a aussi fait prendre conscience des défis liés à la précision des modèles et m’a donné des pistes pour améliorer un modèle en ajustant les étapes de traitement et en diversifiant les données. En somme, cette expérience a été précieuse pour approfondir mes compétences en intelligence artificielle appliquée.",
             imgs: ["reco/basededonnées.png", "reco/matrice_Confusion.png", "reco/schéma.png", "reco/traitement.png"],
@@ -51,6 +53,7 @@ export const Status = () => {
         {
             Logo: Atom,
             title: "3D Pokédex",
+            date: "Décembre 2024",
             shortDescription: "Projet React, permettant de consulter un Pokédex contenant des models 3D, avec différentes fonctionnalité supplémentaire.",
             description: "Au sein d'une équipe de 5 personnes, nous avons développé un site dynamique dédié aux fans de Pokémon, en adoptant une méthodologie agile (SCRUM). Ce projet inclut un Pokédex interactif intégrant des modèles 3D de Pokémon réalisés avec Three.js. Les utilisateurs peuvent rechercher des Pokémon par nom, type, numéro de Pokédex, statistiques, afin de composer leurs propres équipes stratégiques. Ce projet a été l'occasion de nous familiariser avec des technologies clés telles que React, Three.js, et l'intégration d'une base de données MongoDB",
             imgs: ["3dpokedex/pokedex1.png", "3dpokedex/pokedex2.png", "3dpokedex/pokedex3.png", "3dpokedex/pokedex4.png", "3dpokedex/pokedex5.png", "3dpokedex/pokedex6.png", "3dpokedex/pokedex7.png"],
@@ -63,6 +66,7 @@ export const Status = () => {
         {
             Logo: Earth,
             title: "Antigaspillage CROUS",
+            date: "Janvier 2025",
             shortDescription: "Site web permettant aux dirigeants du crous de centraliser les données liées aux gaspillages alimentaires afin de facilité la prise de décision.",
             description: "En équipe de 5, nous avons développé un proof of concept destiné au CROUS de Bordeaux pour lutter contre le gaspillage alimentaire. Ce projet consistait à centraliser et uniformiser les données fournies par plusieurs prestataires chargés de collecter les biodéchets quotidiennement. Ces informations sont utilisées à des fins de datavisualisation pour permettre aux dirigeants de prendre des décisions plus éclairées. Ce projet a également été l'occasion de travailler avec des technologies telles que Symfony, MariaDB, et Python pour le scraping de données.",
             imgs: ["crous/crous1.png", "crous/crous2.png", "crous/crous3.png", "crous/crous4.png"],
@@ -95,6 +99,7 @@ export const Status = () => {
     type ProjectsProps = {
         Logo: LucideIcon;
         title: string;
+        date: string;
         shortDescription: string;
         description: string;
         imgs: string[];
@@ -108,9 +113,13 @@ export const Status = () => {
                     <span className="bg-accent text-accent-foreground p-3 rounded-sm">
                         <props.Logo size={18} />
                     </span>
-                    <div className="text-left">
-                        <p className="text-lg font-semibold">{props.title}</p>
-                        <p className="text-sm text-muted-foreground">{props.shortDescription}</p>
+                    <div className="w-full text-left">
+                        <div className='flex w-full items-center justify-between'>
+                            <p className="text-lg font-semibold">{props.title}</p>
+                            <p className="text-sm text-muted-foreground">{props.date}</p>
+                        </div>
+
+                        <p className="w-[75%] text-sm text-muted-foreground">{props.shortDescription}</p>
                     </div>
                 </DialogTrigger>
 
@@ -202,6 +211,7 @@ export const Status = () => {
                                     key={index}
                                     Logo={project.Logo}
                                     title={project.title}
+                                    date={project.date}
                                     shortDescription={project.shortDescription}
                                     description={project.description}
                                     imgs={project.imgs}
