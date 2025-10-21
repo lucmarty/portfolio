@@ -1,5 +1,4 @@
 import { Section } from './Section';
-import Image from "next/image";
 import BlurFade from "@/components/ui/blur-fade";
 
 export const Hero = () => {
