@@ -18,18 +18,6 @@ export const Hero = () => {
           </p>
         </BlurFade>
     </div>
-
-      <div className="flex-1 max-md:m-auto ml-auto">         
-        <BlurFade delay={0.1*4} inView>
-          <Image 
-                  src="./assets/logo.png"
-                  width={200}   
-                  height={200}                  
-                  className="w-full h-auto max-w-xs max-md:w-56 rounded-full" 
-                  alt = "lucas marty logo"
-              />      
-        </BlurFade>  
-      </div>
     </Section>
   );
 };
