@@ -9,8 +9,9 @@ export default function Home() {
       <Header />
       <Spacing size = "sm"/>
       <Hero /> 
-      <Spacing size = "md"/>      
+      <Spacing size = "sm"/>      
       <Status />
+      <Spacing size = "sm"/>    
     </main>
   );
 }
