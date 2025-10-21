@@ -81,14 +81,21 @@ export const Status = () => {
 
     const WORKS: WorksProps[] = [
         {
-            image: "https://media.licdn.com/dms/image/v2/C4E0BAQGNfeTPCu6Z-w/company-logo_100_100/company-logo_100_100/0/1631312208065?e=1746057600&v=beta&t=5bL9ashQylDGS4dZ_cwevHjjWDryMRW5kMhFx0b0X6Y",
+            image: "crous.png",
+            title: "Crous de Bordeaux",
+            role: "Stage Développeur Fullstack",
+            date: "Avril 2025 - Juillet 2025",
+            url: "https://www.linkedi"
+        },
+        {
+            image: "se.jpg",
             title: "Schneider Electric",
             role: "Stage Développeur Fullstack",
             date: "Avril 2024 - Juin 2024",
             url: "https://www.linkedin.com/company/2329/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BFPv8z692SCmduIkABpNJCA%3D%3D"
         },
         {
-            image: "https://media.licdn.com/dms/image/v2/C4D0BAQHqjJ4jvF3MOQ/company-logo_100_100/company-logo_100_100/0/1635141033555/la_poste_logo?e=1746057600&v=beta&t=bvyPQuPcLRP82_BELzbfJ6Qwq95gNt8qUxp1i7Lrhxo",
+            image: "laposte.jpg",
             title: "La Poste",
             role: "Chargé de Clientèle",
             date: "Septembre 2022 - Janvier 2024",
@@ -182,9 +189,9 @@ export const Status = () => {
 
     const Works = (props: WorksProps) => {
         return (
-            <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded">
+            <div className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded">
                 <img
-                    src={props.image}
+                    src={`./assets/logo/${props.image}`}
                     alt={props.title}
                     className="w-10 h-10 object-contain rounded-md"
                 />
@@ -195,7 +202,7 @@ export const Status = () => {
                 <div className="ml-auto">
                     <p className="text-sm text-muted-foreground">{props.date}</p>
                 </div>
-            </Link>
+            </div>
         )
     };
 
